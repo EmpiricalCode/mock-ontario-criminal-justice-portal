@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* Element selectors */
+body, html {
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Fonts */
+@font-face {
+    font-family: "Gotham";
+    src: url("assets/fonts/gothambook.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Gotham Medium";
+    src: url("assets/fonts/gothammedium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Gotham Bold";
+    src: url("assets/fonts/gothambold.woff") format("woff");
+}

@@ -1,0 +1,118 @@
+:host {
+    min-height: 100vh;
+    display: block;
+    position: relative;
+}
+
+/* ID Selectors */
+#header {
+    height: 60px;
+    width: calc(100% - 400px);
+    background: rgb(20, 20, 20);
+    display: flex;
+    padding: 30px 200px 30px 200px;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: calc(100% - 400px);
+    background: rgb(20, 20, 20);
+    padding: 30px 200px 30px 200px;
+    flex-grow: 1;
+    position: absolute;
+    bottom: 0px;
+}
+
+#footer a {
+    font-family: "Gotham";
+    text-decoration: underline;
+    color: white;
+}
+
+#footer a:hover {
+    cursor: pointer;
+}
+
+#footer-right-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+#footer-left-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    column-gap: 70px;
+}
+
+#header-left-container {
+    display: flex;
+}
+
+#header-right-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+#ontario-home-page:hover {
+    cursor: pointer;
+}
+
+#header-title {
+    font-family: "Gotham";
+    color: white;
+    font-size: 30px;
+    display: inline;
+}
+
+#header-title-shorten {
+    font-family: "Gotham";
+    color: white;
+    font-size: 30px;
+    display: none;
+}
+
+#nav-bar {
+    width: calc(100% - 400px);
+    height: 80px;
+    background: rgb(70, 129, 70);
+    display: flex;
+    align-items: center;
+    padding: 0 200px 0 200px;
+    column-gap: 50px;
+}
+
+.nav-bar-link {
+    color: white;
+    font-family: "Gotham Medium";
+    text-decoration: none;
+    user-select: none;
+}
+
+/* Class selectors */
+.nav-bar-link-active {
+    text-decoration: underline;
+}
+
+/* Exceptions */
+@media only screen and (max-width: 1000px) {
+    #header-title {
+        display: none;
+    }
+
+    #header-title-shorten {
+        display: inline;
+    }
+
+    #footer-right-container a {
+        display: none;
+    }
+}
