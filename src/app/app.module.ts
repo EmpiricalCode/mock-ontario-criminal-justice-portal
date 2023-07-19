@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { OfficerComponent } from './view/officer/officer.component';
 import { HomeComponent } from './view/home/home.component';
 import { PageNotFoundComponent } from './view/page-not-found/page-not-found.component';
-import { OfficerLoggedInComponent } from './view/officer/officer-logged-in/officer-logged-in.component';
+import { OfficerloggedIn$Component } from './view/officer/officer-logged-in/officer-logged-in.component';
 import { OfficerLoggedOutComponent } from './view/officer/officer-logged-out/officer-logged-out.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { OfficerLoggedOutComponent } from './view/officer/officer-logged-out/off
     OfficerComponent,
     HomeComponent,
     PageNotFoundComponent,
-    OfficerLoggedInComponent,
+    OfficerloggedIn$Component,
     OfficerLoggedOutComponent
   ],
   imports: [

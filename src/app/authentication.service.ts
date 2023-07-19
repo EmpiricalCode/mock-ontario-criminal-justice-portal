@@ -9,7 +9,7 @@ export class AuthenticationService {
   constructor() { }
 
   // Checking if user is logged in by checking localstorage for a token
-  loggedIn: Observable<boolean> = new Observable((observer) => {
+  loggedIn$: Observable<boolean> = new Observable((observer) => {
 
     if (localStorage.getItem("token") === null) {
       observer.next(false);

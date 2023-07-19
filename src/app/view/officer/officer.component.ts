@@ -12,5 +12,5 @@ export class OfficerComponent {
 
   constructor(private authenticationService: AuthenticationService) { }
   
-  loggedIn: Observable<boolean> = this.authenticationService.loggedIn;
+  loggedIn$: Observable<boolean> = this.authenticationService.loggedIn$;
 }
