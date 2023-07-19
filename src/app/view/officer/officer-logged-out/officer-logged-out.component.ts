@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { OidcSecurityService } from 'angular-auth-oidc-client';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-officer-logged-out',
@@ -7,9 +9,9 @@ import { Component } from '@angular/core';
 })
 export class OfficerLoggedOutComponent {
 
-  // Setting a token and reloading the page
+  constructor(public oidcSecurityService: OidcSecurityService) {}
+
   login() {
-    localStorage.setItem("token", "token");
-    window.location.reload();
+    this.oidcSecurityService.authorize();
   }
 }

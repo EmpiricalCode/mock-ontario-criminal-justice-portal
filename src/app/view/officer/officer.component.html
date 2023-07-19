@@ -1,2 +1,2 @@
-<app-officer-logged-out *ngIf="!(loggedIn | async)"></app-officer-logged-out>
-<app-officer-logged-in *ngIf="(loggedIn | async)"></app-officer-logged-in>
+<app-officer-logged-out *ngIf="!(loggedIn$ | async)"></app-officer-logged-out>
+<app-officer-logged-in *ngIf="(loggedIn$ | async)"></app-officer-logged-in>
