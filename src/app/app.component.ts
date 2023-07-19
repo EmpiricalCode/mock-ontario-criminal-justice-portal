@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AuthenticationService } from './authentication.service';
+import { OidcSecurityService } from 'angular-auth-oidc-client';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +9,29 @@ import { AuthenticationService } from './authentication.service';
 })
 export class AppComponent {
 
-  constructor(private authenticationService: AuthenticationService) { }
-  
-  loggedIn$: Observable<boolean> = this.authenticationService.loggedIn$;
+  loggedIn$: Observable<boolean> | undefined;
+  userEmail$: Observable<String> | undefined;
+
+  constructor(public oidcSecurityService: OidcSecurityService) { }
+
+  ngOnInit() {
+    this.oidcSecurityService
+    .checkAuth()
+    .subscribe(({ isAuthenticated, userData, accessToken }) => {
+
+      this.loggedIn$ = new Observable((observer) => {
+        observer.next(isAuthenticated);
+      })
+
+      this.userEmail$ = new Observable((observer) => {
+        observer.next(userData.email);
+      })
+    });
+  }
 
   logout() {
-    localStorage.removeItem("token");
-    window.location.reload();
+    this.oidcSecurityService
+      .logoff()
+      .subscribe((result) => console.log(result));
   }
 }
