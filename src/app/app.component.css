@@ -96,7 +96,9 @@
 
 #nav-bar-right {
     display: flex;
+    column-gap: 30px;
     flex-grow: 1;
+    align-items: center;
     justify-content: flex-end;
 }
 
@@ -106,6 +108,18 @@
     color: white;
 }
 
+#logout-button {
+    font-family: "Gotham Medium";
+    font-size: 17px;
+    color: white;
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Class selectors */
 .nav-bar-link {
     color: white;
     font-family: "Gotham Medium";
@@ -113,7 +127,6 @@
     user-select: none;
 }
 
-/* Class selectors */
 .nav-bar-link-active {
     text-decoration: underline;
 }

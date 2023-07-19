@@ -18,6 +18,7 @@
 
   <div id="nav-bar-right">
     <p id="user-email" *ngIf="loggedIn | async">john.doe@opp.ca</p>
+    <button id="logout-button" *ngIf="loggedIn | async" (click)="logout()">Logout</button>
   </div>
 </div>
 
