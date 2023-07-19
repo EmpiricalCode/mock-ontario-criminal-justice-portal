@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthenticationService } from './authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mock-ontario-criminal-justice-portal';
+
+  constructor(private authenticationService: AuthenticationService) { }
+  
+  loggedIn: Observable<boolean> = this.authenticationService.loggedIn;
 }

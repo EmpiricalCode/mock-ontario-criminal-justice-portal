@@ -11,8 +11,14 @@
 
 <!-- NAV BAR -->
 <div id="nav-bar">
-  <a class="nav-bar-link" href="/" [routerLink]="'/'" [routerLinkActive]="'nav-bar-link-active'" [routerLinkActiveOptions]="{exact: true}">Home</a>
-  <a class="nav-bar-link" href="/officer" [routerLink]="'/officer'" [routerLinkActive]="'nav-bar-link-active'">Police Officer</a>
+  <div id="nav-bar-left">
+    <a class="nav-bar-link" href="/" [routerLink]="'/'" [routerLinkActive]="'nav-bar-link-active'" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a class="nav-bar-link" href="/officer" [routerLink]="'/officer'" [routerLinkActive]="'nav-bar-link-active'">Police Officer</a>
+  </div>
+
+  <div id="nav-bar-right">
+    <p id="user-email" *ngIf="loggedIn | async">john.doe@opp.ca</p>
+  </div>
 </div>
 
 <!-- CONTENT -->

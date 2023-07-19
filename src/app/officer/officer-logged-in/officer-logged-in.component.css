@@ -1,0 +1,14 @@
+/* ID Selectors */
+#content-container {
+    width: calc(100% - 400px);
+    height: calc(100vh - 300px);
+    padding: 0 200px 0 200px;
+}
+
+/* Class selectors */
+.title {
+    font-family: "Gotham Medium";
+    margin: 0;
+    padding-top: 50px;
+    font-size: 18px;
+}

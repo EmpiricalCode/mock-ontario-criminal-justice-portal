@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
+import { AuthenticationService } from '../authentication.service';
 
 @Component({
   selector: 'app-officer',
@@ -9,13 +10,7 @@ import { Observable } from 'rxjs';
 
 export class OfficerComponent {
 
-  // Checking if user is logged in by checking localstorage for a token
-  loggedIn: Observable<boolean> = new Observable((observer) => {
-
-    if (localStorage.getItem("token") === null) {
-      observer.next(false);
-    } else {
-      observer.next(true);
-    }
-  });
+  constructor(private authenticationService: AuthenticationService) { }
+  
+  loggedIn: Observable<boolean> = this.authenticationService.loggedIn;
 }
