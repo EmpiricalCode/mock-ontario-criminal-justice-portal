@@ -129,6 +129,10 @@
     user-select: none;
 }
 
+.nav-bar-link:hover {
+    text-decoration: underline;
+}
+
 .nav-bar-link-active {
     text-decoration: underline;
 }
