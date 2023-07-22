@@ -9,6 +9,10 @@ import { PageNotFoundComponent } from './view/page-not-found/page-not-found.comp
 import { OfficerloggedIn$Component } from './view/officer/officer-logged-in/officer-logged-in.component';
 import { OfficerLoggedOutComponent } from './view/officer/officer-logged-out/officer-logged-out.component';
 import { AuthModule, LogLevel } from 'angular-auth-oidc-client';
+import { DefenseLawyerComponent } from './view/defense-lawyer/defense-lawyer.component';
+import { PublicComponent } from './view/public/public.component';
+import { DefenseLawyerLoggedOutComponent } from './view/defense-lawyer/defense-lawyer-logged-out/defense-lawyer-logged-out.component';
+import { DefenseLawyerLoggedInComponent } from './view/defense-lawyer/defense-lawyer-logged-in/defense-lawyer-logged-in.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { AuthModule, LogLevel } from 'angular-auth-oidc-client';
     HomeComponent,
     PageNotFoundComponent,
     OfficerloggedIn$Component,
-    OfficerLoggedOutComponent
+    OfficerLoggedOutComponent,
+    DefenseLawyerComponent,
+    PublicComponent,
+    DefenseLawyerLoggedOutComponent,
+    DefenseLawyerLoggedInComponent
   ],
   imports: [
     BrowserModule,
