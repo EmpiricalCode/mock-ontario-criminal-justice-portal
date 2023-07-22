@@ -1,3 +1,7 @@
+:root {
+    --service-tag-color: rgb(155, 48, 48);
+}
+
 /* Element selectors */
 html,body {
     min-width: 100%;

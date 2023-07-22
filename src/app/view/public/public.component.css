@@ -14,12 +14,11 @@
 #functional-content-section {
     flex-grow: 1;
     display: flex;
-    width: 100%;
     flex-direction: row;
 }
 
 #image-section {
-    width: 30%;
+    width: 50%;
     height: 100%;
     background: url("../../../assets/images/busy-street.jpg");
     background-size: cover;
@@ -28,7 +27,7 @@
 
 #service-section {
     padding: 40px 50px 50px 100px;
-    width: calc(50% - 150px);
+    width: calc(100% - 150px);
 }
 
 #login-section {
@@ -62,6 +61,7 @@
 
 #available a {
     color: rgb(43, 157, 43);
+    text-decoration: none;
 }
 
 #available-soon a {
