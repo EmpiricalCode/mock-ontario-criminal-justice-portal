@@ -36,3 +36,16 @@
 #site-description {
     font-family: "Gotham";
 }
+
+/* Exceptions */
+@media only screen and (max-width: 650px) {
+
+    #landing-description {
+        left: 0;
+        width: auto;
+    }
+
+    #description-container {
+        padding: 50px;
+    }
+}

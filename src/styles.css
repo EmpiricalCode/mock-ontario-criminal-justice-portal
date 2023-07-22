@@ -1,7 +1,10 @@
 /* Element selectors */
-body, html {
-    margin: 0;
-    min-height: 100vh;
+html,body {
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 /* Fonts */

@@ -1,7 +1,6 @@
 /* ID Selectors */
 #content-container {
     width: calc(100% - 400px);
-    min-height: calc(100vh - 300px);
     padding: 0 200px 0 200px;
 }
 
@@ -37,4 +36,13 @@
 
 .service-title {
     font-family: "Gotham Medium";
+}
+
+/* Exceptions */
+@media only screen and (max-width: 700px) {
+
+    #content-container {
+        width: calc(100% - 100px);
+        padding: 0 50px 50px 50px;
+    }
 }

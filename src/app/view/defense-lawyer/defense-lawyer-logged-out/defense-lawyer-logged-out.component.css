@@ -1,7 +1,6 @@
 :host {
-    height: calc(100vh - 300px);
-    min-height: 700px;
     display: block;
+    width: 100%;
 }
 
 /* ID Selectors */
@@ -15,6 +14,7 @@
 #functional-content-section {
     flex-grow: 1;
     display: flex;
+    width: 100%;
     flex-direction: row;
 }
 
@@ -27,7 +27,7 @@
 }
 
 #service-section {
-    padding: 40px 50px 0 100px;
+    padding: 40px 50px 50px 100px;
     width: calc(50% - 150px);
 }
 
@@ -95,7 +95,29 @@
 
 /* Exceptions */
 @media only screen and (max-width: 1200px) {
+
     #image-section {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    #image-section {
+        display: none;
+    }
+    
+    #functional-content-section {
+        flex-direction: column;
+    }
+
+    #service-section {
+        width: calc(100% - 100px);
+        padding: 50px 50px 50px 50px;
+    }
+
+    #login-section {
+        width: calc(100% - 100px);
+        padding: 50px 50px 50px 50px;
     }
 }

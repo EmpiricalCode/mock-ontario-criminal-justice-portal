@@ -1,6 +1,7 @@
 :host {
     min-height: 100vh;
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
@@ -16,12 +17,10 @@
 #footer {
     display: flex;
     flex-direction: row;
-    height: 60px;
+    min-height: 60px;
     width: calc(100% - 400px);
     background: rgb(20, 20, 20);
     padding: 30px 200px 30px 200px;
-    flex-grow: 1;
-    position: absolute;
     bottom: 0px;
 }
 
@@ -35,25 +34,27 @@
     cursor: pointer;
 }
 
-#footer-right-container {
+#footer-right {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-grow: 1;
+    width: 50%;
 }
 
-#footer-left-container {
+#footer-left {
     display: flex;
     align-items: center;
     overflow: hidden;
     column-gap: 70px;
+    width: 50%;
 }
 
-#header-left-container {
+#header-left {
     display: flex;
+    width: 50%;
 }
 
-#header-right-container {
+#header-right {
     display: flex;
     flex-grow: 1;
     justify-content: flex-end;
@@ -71,6 +72,7 @@
     color: white;
     font-size: 30px;
     display: inline;
+    text-align: right;
 }
 
 #header-title-shorten {
@@ -141,7 +143,53 @@
         display: inline;
     }
 
-    #footer-right-container a {
+    /* #footer-right a {
         display: none;
+    } */
+}
+
+@media only screen and (max-width: 1100px) {
+    #nav-bar {
+        padding: 0 50px 0 50px !important;
+        width: calc(100% - 100px) !important;
+    }
+
+    #header {
+        padding: 30px 50px 30px 50px !important;
+        width: calc(100% - 100px) !important;
+    }
+
+    #footer {
+        padding: 30px 50px 30px 50px !important;
+        width: calc(100% - 100px) !important;
+    }
+
+    .nav-bar-link {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+   
+    #footer-left {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    #header-title-shorten {
+        display: none !important;
+    }
+
+    #nav-bar {
+        height: 230px;
+    }
+
+    #nav-bar-left {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
     }
 }
