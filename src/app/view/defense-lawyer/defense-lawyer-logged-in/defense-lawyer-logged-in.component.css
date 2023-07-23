@@ -1,8 +1,11 @@
+:host {
+    width: 100%;
+}
+
 /* ID Selectors */
 #content-container {
     width: calc(100% - 400px);
-    min-height: calc(100vh - 300px);
-    padding: 0 200px 0 200px;
+    padding: 50px 200px 50px 200px;
 }
 
 #service-container {
@@ -14,6 +17,14 @@
 .service {
     cursor: pointer;
     display: inline-block;
+}
+
+.alert {
+    background: rgb(210, 66, 66);
+    border-radius: 20px;
+    color: white;
+    padding: 30px;
+    font-family: "Gotham";
 }
 
 .title {
@@ -37,13 +48,13 @@
 
 .service-title {
     font-family: "Gotham Medium";
-}   
+}
 
 /* Exceptions */
 @media only screen and (max-width: 700px) {
 
     #content-container {
         width: calc(100% - 100px);
-        padding: 0 50px 50px 50px;
+        padding: 50px 50px 50px 50px;
     }
 }

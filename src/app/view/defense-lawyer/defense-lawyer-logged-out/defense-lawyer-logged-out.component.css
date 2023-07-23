@@ -26,7 +26,7 @@
 }
 
 #service-section {
-    padding: 40px 50px 50px 100px;
+    padding: 40px 50px 100px 100px;
     width: calc(50% - 150px);
 }
 
@@ -94,6 +94,14 @@
 }
 
 /* Class selectors */
+.alert {
+    background: rgb(210, 66, 66);
+    border-radius: 20px;
+    color: white;
+    padding: 30px;
+    font-family: "Gotham";
+}
+
 .service-tag {
     font-family: "Gotham Medium";
     font-size: 15px;
@@ -124,7 +132,7 @@
 
     #service-section {
         width: calc(100% - 100px);
-        padding: 50px 50px 50px 50px;
+        padding: 50px 50px 100px 50px;
     }
 
     #login-section {
