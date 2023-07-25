@@ -1,12 +1,12 @@
 :host {
-    display: block;
-    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    align-items: stretch;
 }
 
 /* ID Selectors */
 #content-container {
     display: flex;
-    height: 100%;
     flex-direction: row;
     width: 100%;
 }
@@ -18,29 +18,16 @@
 }
 
 #image-section {
-    width: 30%;
+    width: 50%;
     height: 100%;
-    background: url("../../../../assets/images/police-officer.jpg");
+    background: url("../../../assets/images/busy-street.jpg");
     background-size: cover;
     background-position: 100% 100%;
 }
 
 #service-section {
     padding: 40px 50px 100px 100px;
-    width: calc(50% - 150px);
-}
-
-#login-section {
-    width: calc(50% - 200px);
-    height: calc(100% - 40px);
-    background: rgb(230, 230, 230);
-    padding: 40px 100px 0 100px;
-    text-align: center;
-}
-
-#login-title {
-    font-family: "Gotham Medium";
-    font-size: 20px;
+    width: calc(100% - 150px);
 }
 
 #services-title {
@@ -77,22 +64,6 @@
     font-size: 20px;
 }
 
-#login-button {
-    display: inline-block;
-    font-family: "Gotham";
-    color: white;
-    background: rgb(93, 127, 200);
-    padding: 10px 60px 10px 60px;
-    margin-top: 10px;
-    border-radius: 10px;
-    transition: 0.5s;
-}
-
-#login-button:hover {
-    background: rgb(138, 165, 223);
-    cursor: pointer;
-}
-
 /* Class selectors */
 .alert {
     background: rgb(210, 66, 66);
@@ -100,16 +71,6 @@
     color: white;
     padding: 30px;
     font-family: "Gotham";
-}
-
-.service-tag {
-    font-family: "Gotham Medium";
-    font-size: 15px;
-    display: inline;
-    padding: 5px;
-    border-radius: 10px;
-    border: 2px solid var(--service-tag-color);
-    color: var(--service-tag-color);
 }
 
 /* Exceptions */
@@ -133,10 +94,5 @@
     #service-section {
         width: calc(100% - 100px);
         padding: 50px 50px 100px 50px;
-    }
-
-    #login-section {
-        width: calc(100% - 100px);
-        padding: 50px 50px 50px 50px;
     }
 }
